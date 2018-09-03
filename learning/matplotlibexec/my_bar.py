@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+fimport matplotlib.pyplot as plt
 import numpy as np
 
 n = 12

@@ -14,6 +14,7 @@ from sorting.heap.heapSorting import heapSorting
 from sorting.quick.quickSorting import quickSorting
 from sorting.counting.countingSorting import countingStableSorting, countingUnstableSorting
 from sorting.radix.radixSorting import radixSorting
+from sorting.utils import getRandomList
 
 _LIST_LENGTH = 1000
 _UNIQUE_ELEMENT = False
@@ -66,10 +67,7 @@ class SortingTest(unittest.TestCase):
                 SortingTest.TEST_DATA.append(random.randrange(start=0, stop=_LIST_LENGTH, step=1))
 
     def __prepareUniqueList(self):
-        SortingTest.TEST_DATA = []
-        sorted_list = [i for i in range(0, _LIST_LENGTH)]
-        for index in range(0, _LIST_LENGTH):
-            SortingTest.TEST_DATA.append(sorted_list.pop(random.randrange(start=0, stop=_LIST_LENGTH - index, step=1)))
+        SortingTest.TEST_DATA = getRandomList(_LIST_LENGTH)
 
     def setUp(self):
         pass

@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 import datetime
+import random
 from logger import logger
 
 
@@ -29,3 +30,11 @@ def swapElements(source_list, i, j):
     buffer_i = source_list[i]
     source_list[i] = source_list[j]
     source_list[j] = buffer_i
+
+
+def getRandomList(length):
+    tmp_list = []
+    sorted_list = [i for i in range(0, length)]
+    for index in range(0, length):
+        tmp_list.append(sorted_list.pop(random.randrange(start=0, stop=length - index, step=1)))
+    return tmp_list
