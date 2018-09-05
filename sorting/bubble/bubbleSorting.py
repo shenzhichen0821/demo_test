@@ -4,8 +4,8 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 
 import copy
-from sorting.utils import sorting, swapElements
 from sorting.utils import getRandomList
+from sorting.utils import sorting, swapElements
 
 
 def addPlots(*_):
